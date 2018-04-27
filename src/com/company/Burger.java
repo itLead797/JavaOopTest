@@ -27,20 +27,6 @@ public class Burger {
         additions.clear();
     }
 
-    public Burger(ArrayList<Addition> additions) {
-        this("Basic",1, "Sesame seed", 0, additions, 4, 5.00);
-        additions.clear();
-    }
-
-    public double getCost(Burger burger) {
-
-        double totalCost = this.cost;
-        for(int i = 0; i < burger.additions.size(); i++) {
-            totalCost += burger.additions.get(i).getCost();
-        }
-        System.out.println("Burger cost is " + totalCost);
-        return totalCost;
-    }
     public void printReceipt(Burger burger) {
         double totalCost = this.cost;
         System.out.println("Burger ordered: : " + this.name + " Burger");
